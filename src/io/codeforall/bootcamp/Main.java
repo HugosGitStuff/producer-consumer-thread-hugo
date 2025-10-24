@@ -11,19 +11,19 @@ public class Main {
 
         Producer p1 = new Producer(queue,10);
         Thread t1 = new Thread(p1);
-        t1.setName("p1");
+        t1.setName("Mario");
 
         Producer p2 = new Producer(queue,10);
         Thread t2 = new Thread(p2);
-        t2.setName("p2");
+        t2.setName("Luigi");
 
         Consumer c1 = new Consumer(queue, 10);
         Thread t3 = new Thread(c1);
-        t3.setName("c1");
+        t3.setName("Hugo");
 
         Consumer c2 = new Consumer(queue, 10);
         Thread t4 = new Thread(c2);
-        t4.setName("c2");
+        t4.setName("Nay");
 
         t3.start();
         t4.start();

@@ -10,7 +10,7 @@ public class Pizza {
 
     @Override
     public String toString() {
-        return "A " + topping.name() + " pizza";
+        return "the " + topping.name() + " pizza.";
     }
 
     private enum Topping {

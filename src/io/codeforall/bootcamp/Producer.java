@@ -44,7 +44,7 @@ public class Producer implements Runnable {
             }
 
             // When done producing all pizzas, print a message
-            System.out.println("✅ " + Thread.currentThread().getName() + " finished producing " + elementNum + " pizzas");
+            System.out.println("\n" + Thread.currentThread().getName() + " made " + elementNum + " pizzas.");
     }
 
 }

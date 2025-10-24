@@ -52,11 +52,12 @@ public class BQueue<T> {
             queue.add(data);
 
             // Print what happened
-            System.out.println(Thread.currentThread().getName() + " added: " + data + " (Queue size: " + queue.size() + ")");
+            System.out.println("\n" + Thread.currentThread().getName() + " added " + data + ".");
+            System.out.println("Pizzas available: " + queue.size());
 
             // EXTRA FEATURE: Alert when queue becomes full
             if (queue.size() == limit) {
-                System.out.println("🔴 ALERT: " + Thread.currentThread().getName() + " has filled the queue!");
+                System.out.println("Counter is full! Don't make any pizzas for now.");
             }
 
             // Wake up ANY waiting threads (consumers who were waiting for pizzas)
@@ -91,11 +92,12 @@ public class BQueue<T> {
             T data = queue.remove();
 
             // Print what happened
-            System.out.println(Thread.currentThread().getName() + " removed: " + data + " (Queue size: " + queue.size() + ")");
+            System.out.println("\n" + Thread.currentThread().getName() + " removed " + data + ".");
+            System.out.println("Pizzas available: " + queue.size());
 
             // EXTRA FEATURE: Alert when queue becomes empty
             if (queue.isEmpty()) {
-                System.out.println("🟢 ALERT: " + Thread.currentThread().getName() + " has emptied the queue!");
+                System.out.println("Counter is empty! We need more pizzas!");
             }
 
             // Wake up ANY waiting threads (producers who were waiting for space)

@@ -43,7 +43,7 @@ public class Consumer implements Runnable {
             }
 
             // When done consuming all pizzas, print a message
-            System.out.println("✅ " + Thread.currentThread().getName() + " finished consuming " + elementNum + " pizzas");
+            System.out.println("\n" + Thread.currentThread().getName() + " finished eating " + elementNum + " pizzas.");
         }
 
 }
